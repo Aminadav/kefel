@@ -1,0 +1,32 @@
+<style>
+  .x {
+    display: inline-block;
+    font-size: 50px;
+    font-family: Arial;
+    text-align: center;
+    width: 170px;
+    border: 1px solid #333;
+    /* border-bottom: 1px solid #333; */
+    margin: 0px;
+    padding: 40px 0px;
+    page-break-inside:avoid;
+  }
+</style>
+  <script>
+    var targilim = []
+    for (var a = 1; a <= 9; a++) {
+      for (var b = 1; b <= 9; b++) {
+        var c = a * b
+        targilim.push({ a, b, c })
+      }
+    }
+    for (let targil of targilim) {
+      document.write(`
+    <div class=x>
+        ${targil.a} x ${targil.b}
+    </div><div class="x">
+        ${targil.c}
+    </div>
+  `.trim())
+    }
+  </script>
